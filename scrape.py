@@ -135,7 +135,7 @@ if __name__ == "__main__":
             "fanficfare",
             "-i", os.path.join(tag, "cleaned.txt"),
             "-p",
-            "-o", "output_filename=downloaded/${title}-${siteabbrev}_${authorId}_${storyId}${formatext}"
+            "-o", f"output_filename={os.path.join(tag, '${title}-${siteabbrev}_${authorId}_${storyId}${formatext')}"
         ], check=True)
         print("FanFicFare completed successfully.")
     except subprocess.CalledProcessError as e:
