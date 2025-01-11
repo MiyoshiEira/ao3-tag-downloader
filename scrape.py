@@ -132,6 +132,7 @@ if __name__ == "__main__":
     try:
         # Run fanficfare with the cleaned.txt file
         subprocess.run([
+            "fanficfare",
             "-i", os.path.join(tag, "cleaned.txt"),
             "-p",
             "-o", "output_filename=downloaded/${title}-${siteabbrev}_${authorId}_${storyId}${formatext}"
